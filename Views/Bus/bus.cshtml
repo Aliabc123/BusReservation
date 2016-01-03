@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.title = "Bus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+
+<link rel="stylesheet" href="~/Content/about.css">
+<link href="~/Content/main.css" rel="stylesheet" />
+<script src="~/js/owl.carousel.min.js"></script>
+<!-- Section Background -->
+	<section class="section-background">
+		<div class="container">
+			<h2 class="page-header">
+				Bus Details
+			</h2>
+			<ol class="breadcrumb">
+				<li><a href="index.html">Home</a></li>
+				<li class="active">&nbsp;bus</li>
+			</ol>
+		</div> <!-- /.container -->
+	</section> <!-- /.section-background -->
+
+
+<div class="container" id ="abtus">
+  <div class="jumbotron">
+    <h1 style ="text-align:center">...Traveling is Health...</h1>
+    <p>The world is a book, and those who do not travel read only a page. Travel inspires us more than anything else we do. Evidence of the languages, cultures, scenery, food, and design sensibilities that one discover all over the world can be found in every piece of his jewelry. If you wish to travel far and fast, travel light. Take off all your envies, jealousies, unforgiveness, selfishness and fears.</p>
+  </div>
+</div>
+
+
+	<section class="tour section-wrapper container">
+		<h2 class="section-title">
+			Find a Tour
+		</h2>
+		<p class="section-subtitle">
+			Where would you like to go?
+		</p>
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<form role="form" class="form-dropdown">
+					<div class="form-group">
+						<label for="sel1">Select list (select one):</label>
+						<select class="form-control border-radius" id="sel">
+							<option>Source</option>
+                            <option>Lahore</option>
+						</select>
+					</div>
+				</form>
+			</div>
+            <div class="col-md-3 col-sm-6">
+				<form role="form" class="form-dropdown">
+					<div class="form-group">
+						<label for="sel1">Select list (select one):</label>
+						<select class="form-control border-radius" id="sel1">
+							<option>Destination</option>
+                            <option>Lahore</option>
+							<option>Karachi</option>
+							<option>Islamabad</option>
+							<option>Quetta</option>
+                            <option>Peshawer</option>
+                            <option>Multan</option>
+						</select>
+					</div>
+				</form>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="input-group">
+					<input type="text" class="form-control border-radius border-right" placeholder="Departure"/>
+					<span class="input-group-addon border-radius custom-addon">
+						<i class="ion-ios-calendar"></i>
+					</span>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="btn btn-default border-radius custom-button">
+					Search
+				</div>
+			</div>
+		</div>
+	</section> <!-- /.tour -->
+
+
+
+<div class="container">
+      <h1 style ="text-align:center">...Standard Rates...</h1><br />
+      <div class="table-responsive">          
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Bus #</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Ticket Price</th>
+            <th>Seats</th>
+            <th>Time</th>
+            <th>Reserve</th>
+          </tr>
+        </thead>
+        <tbody>
+          @*  @foreach(var x in Model)
+              {
+                <tr>
+                    <td>@x.Id</td>
+                    <td>@x.Source</td>
+                    <td>@x.Destination</td>
+                    <td>@x.Price</td>
+                </tr>
+            }*@
+        </tbody>
+      </table>
+   </div>
+</div>
+

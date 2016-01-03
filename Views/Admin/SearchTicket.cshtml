@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Search Ticket";
+    Layout = "/Views/Shared/_AdminLayout.cshtml";
+ }
+<script src="~/Scripts/bootstrap-datepicker.js"></script>
+<link href="~/Content/datepicker.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/Content/about.css">
+
+<!-- Section Background -->
+<section class="section-background">
+		<div class="container">
+			<h2 class="page-header">
+				Welcome Sir, You can Add/Remove Bus !!!
+			</h2>
+			<ol class="breadcrumb">
+				<li><a href="index.html">Admin</a></li>
+				<li class="active">&nbsp;Bus</li>
+			</ol>
+		</div> <!-- /.container -->
+	</section>
+<!-- /.section-background -->
+
+
+	<section class="tour section-wrapper container">
+		<h2 class="section-title">
+			Find a Ticket
+		</h2>
+		<p class="section-subtitle">
+			Where would you like to go?
+		</p>
+		<div class="row">
+		   <div class="col-md-3 col-sm-6">
+				<div class="input-group">
+					<input type="text" class="form-control border-radius border-right" placeholder="Buss #"/>
+					<span class="input-group-addon border-radius custom-addon">
+                        
+						<i class="ion-ios-calendar"></i>
+					</span>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="input-group">
+					<input type="text" class="form-control border-radius border-right" placeholder="Ticket Number"/>
+					<span class="input-group-addon border-radius custom-addon">
+						<i class="ion-ios-calendar"></i>
+					</span>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="btn btn-default border-radius custom-button">
+					Search
+				</div>
+			</div>
+		</div>
+	</section> <!-- /.tour -->
+
+    <div class="container">
+      <h1 style ="text-align:center">...Ticket Available...</h1><br />
+      <div class="table-responsive">          
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Bus #</th>
+            <th>Source</th>
+            <th>Destination</th>
+             <th>Price</th>
+              <th>Tickets Available</th>
+          </tr>
+        </thead>
+        <tbody>
+          @*  @foreach(var x in Model)
+              {
+                <tr>
+                    <td>@x.busNo</td>
+                    <td>@x.Source</td>
+                    <td>@x.Destination</td>
+                    <td>@x.Price</td>
+                    <td>@x.Tickets</td>
+                </tr>
+            }*@
+        </tbody>
+      </table>
+      </div>
+</div>
+
+
+

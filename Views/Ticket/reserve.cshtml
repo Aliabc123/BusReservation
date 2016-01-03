@@ -1,0 +1,232 @@
+﻿@{
+    ViewBag.Title = "Reserve Ticket";
+    Layout = "/Views/Shared/_Layout.cshtml";
+ }
+<script src="~/Scripts/bootstrap-datepicker.js"></script>
+<link href="~/Content/datepicker.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/Content/about.css">
+
+
+
+<!-- Section Background -->
+	<section class="section-background">
+		<div class="container">
+			<h2 class="page-header">
+				Reserve seat 
+			</h2>
+			<ol class="breadcrumb">
+				<li><a href="index.html">Home</a></li>
+				<li class="active">&nbsp;bus</li>
+			</ol>
+		</div> <!-- /.container -->
+	</section> <!-- /.section-background -->
+
+   <div class="container" id ="abtus">
+      <div class="jumbotron">
+        <h1 style ="text-align:center">We Can Help…</h1>
+        <p>MMM Reservation is a new way to manage your business that takes the hassle out of reservations & online payments.
+
+            Over 60% of visitors to your website are there to check pricing, availability and make a booking. 
+            34% of those are outside of normal business hours. Who’s getting the booking?</p>
+      </div>
+    </div>
+
+<div class="container">
+  <ul class="nav nav-tabs nav-justified">
+    <li class ="active"><a data-toggle="tab" href="#home" style ="color:orange">Reserve Seat</a></li>
+    <li><a data-toggle="tab" href="#menu1" style ="color:orange">Cancel</a></li>
+  </ul>
+    <br />
+    <br />
+
+
+  <div class="tab-content">
+
+
+    <div id="home" class="tab-pane fade in active" style="background-color:inherit;">
+      <section class="tour section-wrapper container">
+		<h2 class="section-title">
+			Reserve Tickets
+		</h2>
+          
+        <div class="row1">
+            <div class="col-md-3 col-sm-6">
+                  <input type="checkbox" name="return" id="ret" value="Return" class="single" onchange="check(this)" />
+                                    <label style="color:#000000;    margin-left: 20%;">Return</label>
+
+            </div>
+            <div class="col-md-3 col-sm-6">
+                 <input type="checkbox" name="Single" id="single" value="Single Way" class="single" />
+                                    <label style="color:#000000;    margin-left: 20%;">Single Way</label>
+
+            </div>
+        </div> <!-- CheckBox -->
+		<div class="row">
+            
+			<div class="col-md-3 col-sm-6">
+				<form role="form" class="form-dropdown">
+					<div class="form-group">
+						<label for="sel1">Select list (select one):</label>
+						<select class="form-control border-radius" id="sel">
+							<option>Source</option>
+                            <option>Lahore</option>
+						</select>
+					</div>
+				</form>
+			</div>
+            <div class="col-md-3 col-sm-6">
+				<form role="form" class="form-dropdown">
+					<div class="form-group">
+						<label for="sel1">Select list (select one):</label>
+						<select class="form-control border-radius" id="sel1">
+							<option>Destination</option>
+                            <option>Lahore</option>
+							<option>Karachi</option>
+							<option>Islamabad</option>
+							<option>Quetta</option>
+                            <option>Peshawer</option>
+                            <option>Multan</option>
+						</select>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="input-group">
+					<input type="text" class="form-control border-radius border-right" placeholder="Departure"/>
+					<span class="input-group-addon border-radius custom-addon">
+						<i class="ion-ios-calendar"></i>
+					</span>
+				</div>
+			</div>
+            
+		</div>   <!-- Arrival Destination -->
+        
+      
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <label class="input-group">
+                    <i class="fa fa-calendar"></i>
+                    <label style="color:#000000; padding-top: 10px;">Arrival</label>
+                </label>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <label class="input-group">
+                    <i class="fa fa-calendar"></i>
+                     <label id="retL" style="color:#000000; padding-top: 10px; display:none;">Return</label>
+                </label>
+            </div>
+        </div><!-- Date -->
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <input type="date" name="DateOfBirth" class="form-control border-radius"/>
+            </div>
+            <div id="retD" class="col-md-3 col-sm-6">
+                <input type="date" style="display:none;" name="DateOfBirth" id="retDate" class="form-control border-radius"/>
+            </div>
+        </div>
+        <br style="height:10px;">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <input type="text" name="Bus" class="form-control border-radius" placeholder="Bus Number"/>
+            </div>
+        </div> <!-- Bus No -->
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <input type="text" id="value" name="value"  class="form-control border-radius" placeholder="No Of Passenger" onkeydown="show(this)"/>
+            </div>
+        </div><!-- No Of Passenger -->
+          <br style="height:10px;">
+
+        <div id="drop" class="col-md-12">
+           
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+				<input type="submit" value="submit" class="btn btn-default border-radius custom-button" />
+			</div>
+        </div>
+	  </section> <!-- /.tour -->
+
+    </div>
+
+    <br style="height:10px;">
+
+    <div id="menu1" class="tab-pane fade" style="background-color:aliceblue;">
+       <div class="col-md-11">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <input type="text" name="Bus" class="form-control border-radius" placeholder="Bus Number"/>
+            </div>
+        </div> <!-- Bus No -->
+
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <input type="text" id="value" name="value"  class="form-control border-radius" placeholder="No Of Tickets" onkeydown="show(this)"/>
+            </div>
+        </div><!-- No Of Passenger -->
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+				<input type="submit" value="submit" class="btn btn-default border-radius custom-button" />
+			</div>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>
+<script>
+    function check(e) {
+        if (document.getElementById('ret').checked)
+        {
+            debugger;
+            document.getElementById("retL").style.display = "block";
+            document.getElementById("retDate").style.display = "block";
+        }
+    }
+    function show(e) {
+        var co = parseInt(event.keyCode);
+        if (co >= 1) {
+            var c = document.getElementById("value").value;
+            var count = parseInt(c);
+            var myDiv = document.getElementById("drop");
+
+            
+
+            var row = document.createElement("div");
+            row.className = 'row';
+            myDiv.appendChild(row);
+            debugger;
+            for (var i = 0 ; i < count ; i++) {
+
+                var div = document.createElement("div");
+                div.className = 'col-md-3 col-sm-6';
+                row.appendChild(div);
+
+
+
+                //Create array of options to be added
+                var array = ["Volvo", "Saab", "Mercades", "Audi"];
+
+                //Create and append select list
+                var selectList = document.createElement("select");
+                selectList.id = "mySelect";
+                selectList.className = 'form-control border-radius';
+                myDiv.appendChild(selectList);
+
+                //Create and append the options
+                for (var i = 0; i < array.length; i++) {
+                    var option = document.createElement("option");
+                    option.value = array[i];
+                    option.text = array[i];
+                    selectList.appendChild(option);
+                }
+                if (i % 3 == 0) {
+                    myDiv.appendChild(document.createElement("br"));
+                    var row = document.createElement("div");
+                    row.className = 'row';
+                    myDiv.appendChild(row);
+                }
+            }
+        }
+    }
+</script>
+

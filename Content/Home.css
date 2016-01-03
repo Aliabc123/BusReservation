@@ -1,0 +1,28 @@
+﻿body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+    background-color: #FBFBFB;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 595px;
+    border:1px solid #dcdcdc;
+
+
+}
+.carousel {
+    position: relative;
+    margin-top: 3.8%;
+    /* height: 100px; */
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: 595px;
+    width: 100%;
+}

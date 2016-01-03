@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link href="~/Content/jssor.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Contentbootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/Content/sb-admin.css" rel="stylesheet" />
+	<link rel="stylesheet" href="~/Content/ionicons.min.css"/>
+	<link rel="stylesheet" href="~/Content/owl.carousel.css"/>
+	<link rel="stylesheet" href="~/Content/owl.theme.css"/>
+    <link rel="stylesheet" href="~/Content/main.css"/>
+    <link rel="stylesheet" href="~/Content/section.css"/>
+    <link rel="stylesheet" href="~/Content/about.css"/>
+    <link href="~/Content/Layout.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/jssor.js"></script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['googleanalyticsobject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new date(); a = s.createelement(o),
+        m = s.getelementsbytagname(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentnode.insertbefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'ua-45690170-1', 'jssor.com');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+
+
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+       <a class="navbar-brand" href="#" id ="rs"><p style ="color:red">Euro Travels</p></a>
+     </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+
+             <li> <a href="@Url.Action("Bus", "Admin")">  Bus  </a>  </li>
+
+             <li> <a href="@Url.Action("SearchTicket", "Admin")">Search Ticket </a>  </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+        
+    <br />
+    <br />
+    @RenderBody()
+
+    	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4">
+					<div class="text-left">
+						&copy; Copyright Euro Travels
+					</div>
+				</div>
+				<div class="col-xs-4">
+					Theme by <a href="">Euro Travels</a>
+				</div>
+				<div class="col-xs-4">
+					<!-- <div class="top">
+						<a href="#header">
+							<i class="ion-arrow-up-b"></i>
+						</a>
+					</div> -->
+				</div>
+			</div>
+		</div>		
+	</footer>
+    </body>
+</html>
